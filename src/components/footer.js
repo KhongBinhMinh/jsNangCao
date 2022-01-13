@@ -1,6 +1,6 @@
 const Footer = {
     render() {
-        return /* html */`<div class="max-w-5xl mx-auto bg-blue-800 py-4 text-center text-white"><p>Copyright by Datlt</p></div>`;
+        return /* html */`<div class="py-4 mx-auto bg-blue-800  text-center text-white"><p>Khổng Bình Minh</p></div>`;
     },
 };
 export default Footer;

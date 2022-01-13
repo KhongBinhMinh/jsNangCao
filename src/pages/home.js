@@ -1,6 +1,8 @@
+import news from "../components/news";
+
 const HomePage = {
     render() {
-        return `<h1>Home Page</h1>`;
+        return /* html */`${news.render()}`;
     },
 };
 export default HomePage;
