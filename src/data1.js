@@ -1,4 +1,4 @@
-const data = [
+const data1 = [
     {
         createdAt: "2022-01-10T07:26:52.549Z",
         title: "Annie Stroman",
@@ -41,6 +41,13 @@ const data = [
         desc: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
         id: "6",
     },
+    {
+        createdAt: "2022-01-10T14:41:53.412Z",
+        title: "Muriel Okuneva",
+        img: "http://placeimg.com/640/480/business",
+        desc: "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+        id: "7",
+    },
 
 ];
-export default data;
+export default data1;

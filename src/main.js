@@ -1,20 +1,17 @@
 import Navigo from "navigo";
-import Footer from "./components/footer";
-import Header from "./components/header";
 import AboutPage from "./pages/about";
+import adminDashboard from "./pages/admin/adminDashboard";
+import adminTable from "./pages/admin/adminTable";
+import Detailpage from "./pages/detail";
+import edit from "./pages/edit";
 import HomePage from "./pages/home";
-import NewsDetail from "./pages/NewsDetail";
-import Banner from "./components/banner";
-import Logo from "./components/logo";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
-    document.getElementById("logo").innerHTML = Logo.render();
-    document.getElementById("banner").innerHTML = Banner.render();
-    document.getElementById("header").innerHTML = Header.render();
-    document.getElementById("content").innerHTML = content;
-    document.getElementById("footer").innerHTML = Footer.render();
+    document.querySelector("#app").innerHTML = content;
 };
 
 router.on({
@@ -26,7 +23,23 @@ router.on({
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
-        print(NewsDetail.render(id));
+        print(Detailpage.render(id));
+    },
+    "/admin/dashboard": () => {
+        print(adminDashboard.render());
+    },
+    "/admin/table": () => {
+        print(adminTable.render());
+    },
+    "/SignIn": () => {
+        print(SignIn.render());
+    },
+    "/SignUp": () => {
+        print(SignUp.render());
+    },
+    "/pages/table/:id/edit": ({ data }) => {
+        const { id } = data;
+        print(edit.render(id));
     },
 });
 
