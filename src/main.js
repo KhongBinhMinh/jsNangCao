@@ -1,45 +1,57 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
+import index from "./pages/admin";
+import Add from "./pages/admin/add";
 import adminDashboard from "./pages/admin/adminDashboard";
 import adminTable from "./pages/admin/adminTable";
+import adminEdit from "./pages/admin/edit";
 import Detailpage from "./pages/detail";
 import edit from "./pages/edit";
 import HomePage from "./pages/home";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
+import SignIn from "./pages/signin";
+import Signup from "./pages/signup";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
-    document.querySelector("#app").innerHTML = content;
+const print = async (component, id) => {
+    document.querySelector("#app").innerHTML = await component.render(id);
+    if (component.afterRender) component.afterRender(id);
 };
 
 router.on({
     "/": () => {
-        print(HomePage.render());
+        print(HomePage);
     },
     "/about": () => {
-        print(AboutPage.render());
+        print(AboutPage);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
         print(Detailpage.render(id));
     },
     "/admin/dashboard": () => {
-        print(adminDashboard.render());
+        print(adminDashboard);
     },
     "/admin/table": () => {
-        print(adminTable.render());
+        print(adminTable);
     },
     "/SignIn": () => {
-        print(SignIn.render());
+        print(SignIn);
     },
-    "/SignUp": () => {
-        print(SignUp.render());
+    "/signup": () => {
+        print(Signup);
     },
     "/pages/table/:id/edit": ({ data }) => {
-        const { id } = data;
-        print(edit.render(id));
+        print(edit, data.id);
+    },
+    "/admin/add": () => {
+        print(Add);
+    },
+    "/admin/news": () => {
+        print(index);
+    },
+    "/admin/news/:id/edit": ({ data }) => {
+        print(adminEdit, data.id);
     },
 });
 

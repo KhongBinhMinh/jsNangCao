@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 31,
+      "title": "Thêm mới bài viết12333333",
+      "img": "http://placeimg.com/640/480/business",
+      "desc": "Bài viêt mới đăng"
+    },
+    {
+      "id": 32,
+      "title": "bùm",
+      "img": "http://res.cloudinary.com/djultth5g/image/upload/v1645435982/ow7xt5uyknmowuvwjvzs.jpg",
+      "desc": "u là trời"
+    },
+    {
+      "title": "anh kiên",
+      "img": "http://res.cloudinary.com/djultth5g/image/upload/v1644810912/crn9wsxtuafju2taldoz.jpg",
+      "desc": "hihi",
+      "id": 33
+    },
+    {
+      "title": "đẹp lắm",
+      "img": "http://res.cloudinary.com/djultth5g/image/upload/v1645435062/tb6quf2if0rri8rxlxbf.jpg",
+      "desc": "ối giời ơi",
+      "id": 34
+    }
+  ],
+  "users": [
+    {
+      "email": "minhkbph17672@fpt.edu.vn",
+      "password": "$2a$10$ClAqp4OIT6o68WhXCNlakud6k1PdpTKJy4u/zkc.evbnPM8prlR4m",
+      "username": "minh",
+      "id": 1
+    },
+    {
+      "email": "minh@gmail.com",
+      "password": "$2a$10$O6QFNDYLwr.TJfqJ70OqiurAIF5.cAFKxZmdXyOGqQi4t6QskHuSW",
+      "username": "minh",
+      "id": 2
+    }
+  ]
+}

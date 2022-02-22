@@ -31,7 +31,7 @@ const Table = {
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                ${data1.map((item) => `
+                ${data1.map((item) =>/* html */ `
                   <tr>
                   <td class="px-6 py-4 whitespace-nowrap">
                     <div class="flex items-center">

@@ -1,35 +1,51 @@
-const SignUp = {
+import { signup } from "../api/user";
+
+const Signup = {
     render() {
-        return /* html */ `
-<!-- component -->
-<div class="grid min-h-screen place-items-center">
-  <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-    <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">please fill in your information to continue</span></h1>
-    <form class="mt-6">
-      <div class="flex justify-between gap-3">
-        <span class="w-1/2">
-          <label for="firstname" class="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>
-          <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-        </span>
-        <span class="w-1/2">
-          <label for="lastname" class="block text-xs font-semibold text-gray-600 uppercase">Lastname</label>
-        <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-        </span>
-      </div>
-      <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
-      <input id="email" type="email" name="email" placeholder="john.doe@company.com" autocomplete="email" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-      <label for="password" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
-      <input id="password" type="password" name="password" placeholder="********" autocomplete="new-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-      <label for="password-confirm" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
-      <input id="password-confirm" type="password" name="password-confirm" placeholder="********" autocomplete="new-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-      <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
-        Sign up
-      </button>
-      <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">Already registered?</p>
-    </form>
-  </div>
+        return /* html */`
+        <form id="formSignup">
+        <section class="flex justify-center items-center h-screen bg-gray-800">
+        <div class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4">
+        <div class="mb-4">
+        <p class="text-gray-400">Sign Un</p>
+        <h2 class="text-xl font-bold text-white">Join our community</h2>
+        </div>
+        <div>
+        <input id="username" class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600" type="text" placeholder="Username">
+        </div>
+        <div>
+        <input id="email" class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600" type="text" placeholder="Email">
+        </div>
+        <div>
+        <input id="password" class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600" type="text" placeholder="Password">
+        </div>
+        <div>
+        <button class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200">Sign Up</button>
+        </div>
+        <div class="flex items-center justify-between">
+        <div class="flex flex-row items-center">
+            <input type="checkbox" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+            <label for="comments" class="ml-2 text-sm font-normal text-gray-400">Remember me</label>
+        </div>
+        <div>
+            <a class="text-sm text-blue-600 hover:underline" href="#">Forgot password?</a>
+        </div>
+    </div>
 </div>
-        `;
+</section>
+</form>
+         `;
+    },
+    afterRender() {
+        const formSignup = document.querySelector("#formSignup");
+        formSignup.addEventListener("submit", (e) => {
+            e.preventDefault();
+            signup({
+                username: document.querySelector("#username").value,
+                email: document.querySelector("#email").value,
+                password: document.querySelector("#password").value,
+            });
+        });
     },
 };
-export default SignUp;
+export default Signup;

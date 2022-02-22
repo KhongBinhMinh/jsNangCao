@@ -28,7 +28,7 @@ const Header = {
           </li>
           <li class="px-2 py-1 flex ">
           <button class="bg-fuchsia-600 text-white px-8 py-1 mx-4 rounded-md text-sm font-medium "><a class="" href="/SignIn">SignIn</a></button>
-          <button class="bg-red-700 text-white px-8 py-1   mx-4  rounded-md text-sm font-medium "><a href="/SignUp">SignUp</a></button>
+          <button class="bg-red-700 text-white px-8 py-1   mx-4  rounded-md text-sm font-medium "><a href="/signup">SignUp</a></button>
           </li>
         </ul>
       </nav> `;
