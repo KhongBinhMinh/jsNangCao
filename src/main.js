@@ -34,7 +34,7 @@ router.on({
     "/admin/table": () => {
         print(adminTable);
     },
-    "/singin": () => {
+    "/signin": () => {
         print(SignIn);
     },
     "/signup": () => {
