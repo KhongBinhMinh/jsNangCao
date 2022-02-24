@@ -2,7 +2,9 @@
 import axios from "axios";
 import $ from "jquery";
 import validate from "jquery-validation";
+import index from ".";
 import { add } from "../../api/post";
+import { reRender } from "../utils";
 
 const Add = {
     render() {
@@ -77,6 +79,8 @@ const Add = {
                     img: data.url,
                     desc: document.querySelector("#desc-post").value,
                 });
+                window.location.href = "/admin/news";
+                reRender(index, "#app");
 
             // fetch("http://localhost:3005/post", {
             //     method: "POST",

@@ -26,8 +26,7 @@ router.on({
         print(AboutPage);
     },
     "/news/:id": ({ data }) => {
-        const { id } = data;
-        print(Detailpage.render(id));
+        print(Detailpage, data.id);
     },
     "/admin/dashboard": () => {
         print(adminDashboard);
@@ -35,7 +34,7 @@ router.on({
     "/admin/table": () => {
         print(adminTable);
     },
-    "/SignIn": () => {
+    "/signin": () => {
         print(SignIn);
     },
     "/signup": () => {
