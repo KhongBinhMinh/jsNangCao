@@ -56,7 +56,7 @@ const index = {
                 if (confirm) {
                     // gọi hàm delete trong folder API và bắn id vào hàm
                     remove(id).then(() => {
-                        alert("Đã xóa thành công !");
+                        alert("Đã xóa thành công!");
                         reRender(index, "#app");
                     });
                 }
