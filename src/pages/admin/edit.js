@@ -17,7 +17,7 @@ const adminEdit = {
                         <input type="file" id="img-post" class="border border-black"  placeholder="Image " /> 
                         <div><img width="200" src="${data.img}" id="img-preview"/></div>
                         <textarea name=""  cols="30" rows="10" class="border border-black" id="desc-post" placeholder="Description" ></textarea><br />
-                        <button>update</button>
+                        <button>Update</button>
                     </form>
                 </div>
             </div>                                                                                          
