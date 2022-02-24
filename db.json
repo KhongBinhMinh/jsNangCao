@@ -55,6 +55,12 @@
       "password": "$2a$10$PzzIIo2APThYyLNXBOlYuubddZGVQvzH3Mb/mXR8aZ/nEV5ns/.fe",
       "username": "minhdzai",
       "id": 3
+    },
+    {
+      "email": "minhminh@gmail.com",
+      "password": "$2a$10$qerGXamAd7UZXb9JqFd3GuAxqww/z9bva1fWi79WL2gzB36fJJZH2",
+      "username": "minhminh",
+      "id": 4
     }
   ]
 }
