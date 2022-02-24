@@ -1,10 +1,9 @@
 const data1 = [
     {
-        createdAt: "2022-01-10T07:26:52.549Z",
-        title: "Annie Stroman",
-        img: "http://placeimg.com/640/480/fashion",
-        desc: "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-        id: "1",
+        title: "Điện thoại iPhone XR 128GB",
+        img: "http://res.cloudinary.com/djultth5g/image/upload/v1645678843/pmh00mfojsozolqls370.jpg",
+        desc: "Tất cả dòng iPhone 12 đều được hỗ trợ kết nối 5G ",
+        id: 70,
     },
     {
         createdAt: "2022-01-10T20:33:27.477Z",
