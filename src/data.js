@@ -7,7 +7,10 @@ const data = [
         id: 67,
     },
     {
-
+        title: "Điện thoại iPhone 11 64GB ",
+        img: "http://res.cloudinary.com/djultth5g/image/upload/v1645678675/p0enm61rzfj5lyyfrjfo.jpg",
+        desc: "Tất cả dòng iPhone 12 đều được hỗ trợ kết nối 5G ",
+        id: 68,
     },
     {
 
