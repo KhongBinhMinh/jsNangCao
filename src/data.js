@@ -13,7 +13,10 @@ const data = [
         id: 68,
     },
     {
-
+        title: "Điện thoại iPhone SE 64GB",
+        img: "http://res.cloudinary.com/djultth5g/image/upload/v1645678741/dbfr00jv0chwlygwsqpu.jpg",
+        desc: "Tất cả dòng iPhone 12 đều được hỗ trợ kết nối 5G ",
+        id: 69,
     },
     {
 
